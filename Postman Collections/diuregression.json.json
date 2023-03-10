@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "371e66b1-501e-4f6a-8c99-a53336c58f2d",
+		"name": "Derrill",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dev Regression",
+			"item": [
+				{
+					"name": "AUTH Verify swagger.json Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3f00e890-9758-48b5-9179-8663a3f1c597",
+								"exec": [
+									"pm.test(\"Regressions: Status Code\", () => {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,201,202]);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"_postman_id": "67d4cbe2-8429-492a-a1a3-b8243d960a83",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/{{api-ver}}/auth"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "f00eb9d2-0285-42ec-9b17-10336815cc5f"
+		}
+	]
+}
